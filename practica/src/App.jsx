@@ -12,7 +12,7 @@ function App() {
 
   //Esto es para Juniors
   const filterProducts = (products) => {
-    console.log(products)
+    
     return products.filter(product => {
       return (
         product.price >= filters.minPrice &&

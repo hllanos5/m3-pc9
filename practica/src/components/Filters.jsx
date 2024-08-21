@@ -4,14 +4,14 @@ export function Filters({onChange}) {
     const [minPrice, setMinPrice] = useState(0);
     const handleChangeMinPrice = (event) => {
         setMinPrice(event.target.value);
-        onchange(prevState => ({
+        onChange(prevState => ({
             ...prevState,
             minPrice: event.target.value
         }))
     }
 
-    const handleChageCategory= (event) => {
-        onchange(prevState => ({n
+    const handleChangeCategory= (event) => {
+        onChange(prevState => ({
             ...prevState,
             category: event.target.value
         }))
@@ -26,7 +26,7 @@ export function Filters({onChange}) {
                 id='price'
                 min='0'
                 max='1000' 
-                onChange = {handleChageMinPrice} />
+                onChange = {handleChangeMinPrice} />
                 <span>${minPrice}</span>
             </div>
             <div>
