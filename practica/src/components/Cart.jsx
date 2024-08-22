@@ -8,7 +8,7 @@ function CartItem ({ thumbnail, price, title, quantity, addToCart }) {
   return (
     <li>
       <img
-        src={thumbnail}
+        src={`https://picsum.photos/200/300?random=${price}`}
         alt={title}
       />
       <div>

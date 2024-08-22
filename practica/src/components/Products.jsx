@@ -12,13 +12,13 @@ export function Products ({ products }) {
   return (
     <main className='products'>
       <ul>
-        {products.slice(0, 10).map(product => {
+        {products.slice(0, 10).map((product, index) => {
           const isProductInCart = checkProductInCart(product)
 
           return (
             <li key={product.id}>
               <img
-                src={product.thumbnail}
+                src={`https://picsum.photos/200/300?random=${index}`}
                 alt={product.title}
               />
               <div>
